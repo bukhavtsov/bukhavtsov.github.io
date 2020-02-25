@@ -71,7 +71,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<form class=\" text-center border-light p-5 form-horizontal\" [formGroup]=\"addForm\" (ngSubmit)=\"addNews(addForm.value)\">\n    <h1 class=\"h3 mb-3 font-weight-normal\" style=\"text-align: center\">Add News</h1>\n    <input class=\"form-control mb-4\" id=\"title\" type=\"text\" formControlName=\"title\" placeholder=\"Title\" required=\"\"\n        autofocus=\"\">\n    <input class=\"form-control mb-4\" id=\"type\" type=\"text\" formControlName=\"type\" placeholder=\"Type\" required=\"\"\n        autofocus=\"\">\n    <textarea class=\"form-control mb-4\" id=\"text\" type=\"text\" formControlName=\"text\" placeholder=\"Text...\"></textarea>\n    <input class=\"form-control mb-4\" id=\"date\" type=\"date\" formControlName=\"date\">\n    <input class=\"form-control mb-4\" id=\"image\" type=\"text\" formControlName=\"image\" placeholder=\"Image url\" required=\"\"\n        autofocus=\"\">\n    <button class=\"btn btn-lg btn-dark btn-block mb-4\" type=\"submit\">Create</button>\n</form>";
+    __webpack_exports__["default"] = "<form class=\" text-center border-light p-5 form-horizontal\" [formGroup]=\"addForm\" (ngSubmit)=\"addNews(addForm.value)\">\n    <h1 class=\"h3 mb-3 font-weight-normal\" style=\"text-align: center\">Add News</h1>\n    <input class=\"form-control mb-4\" id=\"title\" type=\"text\" formControlName=\"title\" placeholder=\"Title\" required=\"\"\n        autofocus=\"\">\n    <input class=\"form-control mb-4\" id=\"type\" type=\"text\" formControlName=\"type\" placeholder=\"Type\" required=\"\"\n        autofocus=\"\">\n    <textarea class=\"form-control mb-4\" id=\"text\" type=\"text\" formControlName=\"text\" placeholder=\"Text...\"></textarea>\n    <input class=\"form-control mb-4\" id=\"date\" type=\"date\" formControlName=\"date\">\n    <input class=\"form-control mb-4\" id=\"image\" type=\"text\" formControlName=\"image\" placeholder=\"Image url\" required=\"\"\n        autofocus=\"\">\n    <button class=\"btn btn-lg btn-dark btn-block mb-4\" type=\"submit\">Create</button>\n    \n</form>";
     /***/
   },
 
@@ -91,7 +91,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarTogglerDemo01\"\n      aria-controls=\"navbarTogglerDemo01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse \" id=\"navbarTogglerDemo01\">\n      <ul class=\"navbar-nav\">\n        <li class=\"p-2\">\n          <select class=\"custom-select\">\n            <option selected>Select news Source</option>\n            <option value=\"1\">BBC</option>\n            <option value=\"2\">Google news</option>\n            <option value=\"3\">Local</option>\n          </select>\n        </li>\n        <li class=\"p-2\">\n          <form class=\"form-inline\">\n            <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Type your text...\" aria-label=\"Search\">\n            <button class=\"btn btn-outline-danger my-2 my-sm-0\" type=\"submit\">Filter</button>\n          </form>\n        </li>\n        <li class=\"pl-5 pt-3\">\n          <input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"defaultCheck1\">\n          <label class=\"form-check-label text-dark\" for=\"defaultCheck1\">\n            only created by me\n          </label>\n        </li>\n      </ul>\n      <form class=\"ml-auto\">\n        <button [routerLink]=\"['/news/add']\" routerLinkActive=\"router-link-active\"  class=\"btn btn-outline-danger\" type=\"submit\">Add Article</button>\n      </form>\n    </div>\n  </nav>";
+    __webpack_exports__["default"] = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarTogglerDemo01\"\n    aria-controls=\"navbarTogglerDemo01\" aria-expanded=\"true\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <div class=\"collapse navbar-collapse \" id=\"navbarTogglerDemo01\">\n    <ul class=\"navbar-nav\">\n      <li class=\"p-2\">\n        <select class=\"custom-select\">\n          <option selected>Select news Source</option>\n          <option value=\"1\">BBC</option>\n          <option value=\"2\">Google news</option>\n          <option value=\"3\">Local</option>\n        </select>\n      </li>\n      <li class=\"p-2\">\n        <form class=\"form-inline\" [formGroup]=\"searchForm\" (ngSubmit)=\"submitSearch(searchForm.value)\">\n          <input class=\"form-control mr-sm-2\" id=\"title\" type=\"text\" formControlName=\"title\" placeholder=\"\" required=\"\"\n            autofocus=\"\">\n          <button class=\"btn btn-outline-danger my-2 my-sm-0\" type=\"submit\">Filter</button>\n        </form>\n      </li>\n      <li class=\"pl-5 pt-3\">\n        <input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"defaultCheck1\">\n        <label class=\"form-check-label text-dark\" for=\"defaultCheck1\">\n          only created by me\n        </label>\n      </li>\n    </ul>\n    <form class=\"ml-auto\">\n      <button [routerLink]=\"['/news/add']\" routerLinkActive=\"router-link-active\" class=\"btn btn-outline-danger\"\n        type=\"submit\">Add Article</button>\n    </form>\n  </div>\n</nav>";
     /***/
   },
 
@@ -111,7 +111,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<form class=\" text-center border-light p-5 form-horizontal\" [formGroup]=\"editForm\"\n    (ngSubmit)=\"editNews(editForm.value)\">\n    <h1 class=\"h3 mb-3 font-weight-normal\" style=\"text-align: center\">Edit News</h1>\n    <input class=\"form-control mb-4\" id=\"title\" type=\"text\" formControlName=\"title\" placeholder=\"Title\" required=\"\"\n        autofocus=\"\">\n    <input class=\"form-control mb-4\" id=\"type\" type=\"text\" formControlName=\"type\" placeholder=\"Type\" required=\"\"\n        autofocus=\"\">\n    <input class=\"form-control mb-4\" id=\"date\" type=\"date\" formControlName=\"date\">\n    <button class=\"btn btn-lg btn-dark btn-block mb-4\" type=\"submit\">Edit</button>\n</form>\n";
+    __webpack_exports__["default"] = "<form class=\" text-center border-light p-5 form-horizontal\" [formGroup]=\"editForm\"\n    (ngSubmit)=\"editNews(editForm.value)\">\n    <h1 class=\"h3 mb-3 font-weight-normal\" style=\"text-align: center\">Edit News</h1>\n    <input class=\"form-control mb-4\" id=\"title\" type=\"text\" formControlName=\"title\" placeholder=\"Title\" required=\"\"\n        autofocus=\"\">\n    <input class=\"form-control mb-4\" id=\"type\" type=\"text\" formControlName=\"type\" placeholder=\"Type\" required=\"\"\n        autofocus=\"\">\n    <textarea class=\"form-control mb-4\" id=\"text\" type=\"text\" formControlName=\"text\" placeholder=\"Text...\"></textarea>\n    <input class=\"form-control mb-4\" id=\"date\" type=\"date\" formControlName=\"date\">\n    <input class=\"form-control mb-4\" id=\"image\" type=\"text\" formControlName=\"image\" placeholder=\"Image URL\" required=\"\"\n        autofocus=\"\">\n    <button class=\"btn btn-lg btn-dark btn-block mb-4\" type=\"submit\">Edit</button>\n</form>\n";
     /***/
   },
 
@@ -131,7 +131,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n<div *ngIf=\"!this.hideNewsList\">\n    <div *ngFor=\"let news of this.svcNews.getNewsList()\" class=\"row p-2\">\n        <div class=\"col-sm-4\">\n            <a [routerLink]=\"['/news', news.id]\" routerLinkActive=\"\"><img class=\"img-thumbnail\"\n                    src=\"{{news.image}}\"></a>\n        </div>\n        <div class=\"col-sm-4\">\n            <div class=\"module\">\n                <h5>{{news.title}}</h5>\n                <p class=\"collapse \" id=\"collapse{{news.id}}\" aria-expanded=\"false\">\n                    {{news.text}}\n                </p>\n                <a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" href=\"#collapse{{news.id}}\"\n                    aria-expanded=\"false\" aria-controls=\"collapse{{news.id}}\"></a>\n            </div>\n        </div>\n        <div class=\"col-sm-2 small\">{{news.date}}</div>\n        <div class=\"col-sm-2\">\n            <button [routerLink]=\"['/news/edit', news.id]\" type=\"button\"\n                class=\"btn btn-secondary btn-sm btn-block\">Edit</button>\n            <button (click)=\"this.svcNews.remove(news.id)\" type=\"button\"\n                class=\"btn btn-danger btn-sm btn-block\">Delete</button>\n        </div>\n    </div>\n</div>";
+    __webpack_exports__["default"] = "<div *ngIf=\"!this.hideNewsList\">\n    <div *ngFor=\"let news of this.svcNews.getNewsList() | newsFilter:search\" class=\"row p-2\">\n        <div class=\"col-sm-4\">\n            <a [routerLink]=\"['/news', news.id]\" routerLinkActive=\"\"><img class=\"img-thumbnail\"\n                    src=\"{{news.image}}\"></a>\n        </div>\n        <div class=\"col-sm-4\">\n            <div class=\"module\">\n                <h5>{{news.title}}</h5>\n                <p class=\"collapse \" id=\"collapse{{news.id}}\" aria-expanded=\"false\">\n                    {{news.text}}\n                </p>\n                <a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" href=\"#collapse{{news.id}}\"\n                    aria-expanded=\"false\" aria-controls=\"collapse{{news.id}}\"></a>\n            </div>\n        </div>\n        <div class=\"col-sm-2 small\">{{news.date}}</div>\n        <div class=\"col-sm-2\">\n            <button [routerLink]=\"['/news/edit', news.id]\" type=\"button\"\n                class=\"btn btn-secondary btn-sm btn-block\">Edit</button>\n            <button (click)=\"this.svcNews.remove(news.id)\" type=\"button\"\n                class=\"btn btn-danger btn-sm btn-block\">Delete</button>\n        </div>\n    </div>\n</div>";
     /***/
   },
 
@@ -171,7 +171,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1 class=\"text-center\">{{this.news.title}}</h1>\n\n<div class=\"d-flex justify-content-center\">\n    <img src=\"{{this.news.image}}\" class=\"img-fluid\">\n</div>\n<div class=\"blog-main\">\n    <div class=\"blog-post\">\n        <p class=\"blog-post-meta\">{{this.news.date}}</p>\n        {{this.news.text}}\n    </div>\n\n</div>";
+    __webpack_exports__["default"] = "<h1 class=\"text-center\">{{this.news.title}}</h1>\n\n<div class=\"d-flex justify-content-center\">\n    <img src=\"{{this.news.image}}\" class=\"img-fluid rounded col-lg-8\">\n</div>\n<div class=\"blog-main\">\n    <div class=\"blog-post\">\n        <p class=\"blog-post-meta\">{{this.news.date}}</p>\n        {{this.news.text}}\n    </div>\n\n</div>";
     /***/
   },
 
@@ -191,7 +191,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<footer class=\"pt-4  border-top\">\n  <div class=\"row\">\n    <div class=\"col-12 col-md\">\n      <small class=\"d-block mb-3 text-muted\">© 2017-2019</small>\n    </div>\n    <div class=\"col-6 col-md\">\n      <h5>Features</h5>\n      <ul class=\"list-unstyled text-small\">\n        <li><a class=\"text-muted\" href=\"#\">Cool stuff</a></li>\n        <li><a class=\"text-muted\" href=\"#\">Random feature</a></li>\n        <li><a class=\"text-muted\" href=\"#\">Team feature</a></li>\n        <li><a class=\"text-muted\" href=\"#\">Stuff for developers</a></li>\n        <li><a class=\"text-muted\" href=\"#\">Another one</a></li>\n        <li><a class=\"text-muted\" href=\"#\">Last time</a></li>\n      </ul>\n    </div>\n    <div class=\"col-6 col-md\">\n      <h5>Resources</h5>\n      <ul class=\"list-unstyled text-small\">\n        <li><a class=\"text-muted\" href=\"#\">Resource</a></li>\n        <li><a class=\"text-muted\" href=\"#\">Resource name</a></li>\n        <li><a class=\"text-muted\" href=\"#\">Another resource</a></li>\n        <li><a class=\"text-muted\" href=\"#\">Final resource</a></li>\n      </ul>\n    </div>\n    <div class=\"col-6 col-md\">\n      <h5>About</h5>\n      <ul class=\"list-unstyled text-small\">\n        <li><a class=\"text-muted\" href=\"#\">Team</a></li>\n        <li><a class=\"text-muted\" href=\"#\">Locations</a></li>\n        <li><a class=\"text-muted\" href=\"#\">Privacy</a></li>\n        <li><a class=\"text-muted\" href=\"#\">Terms</a></li>\n      </ul>\n    </div>\n  </div>\n</footer>\n";
+    __webpack_exports__["default"] = "<footer class=\"py-4 bg-dark text-white-50\">\n  <div class=\"container text-center\">\n    <small>NewsAPI, by @bukhavtsov.</small>\n  </div>\n</footer>";
     /***/
   },
 
@@ -1155,10 +1155,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var AddFormComponent =
     /*#__PURE__*/
-
-    /**
-     * @author Artsiom_Bukhautsou
-     */
     function () {
       function AddFormComponent(svcNews, formBuilder, router) {
         _classCallCheck(this, AddFormComponent);
@@ -1172,10 +1168,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(AddFormComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {}
-        /**
-         * initAddForm initialize addForm by default values
-         */
-
       }, {
         key: "initForm",
         value: function initForm() {
@@ -1187,10 +1179,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             image: ''
           });
         }
-        /**
-         * Submit value of addForm into View list
-         */
-
       }, {
         key: "addNews",
         value: function addNews(news) {
@@ -1221,11 +1209,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
       /*! ./add-form.component.scss */
       "./src/app/news/admin/add-form/add-form.component.scss")).default]
-    })
-    /**
-     * @author Artsiom_Bukhautsou
-     */
-    ], AddFormComponent);
+    })], AddFormComponent);
     /***/
   },
 
@@ -1280,21 +1264,63 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var src_app_shared_search_news_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/app/shared/search-news.service */
+    "./src/app/shared/search-news.service.ts");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 
     var AdminPanelComponent =
     /*#__PURE__*/
     function () {
-      function AdminPanelComponent() {
+      function AdminPanelComponent(svcSearch, formBuilder) {
         _classCallCheck(this, AdminPanelComponent);
+
+        this.svcSearch = svcSearch;
+        this.formBuilder = formBuilder;
+        this.initForm();
       }
 
       _createClass(AdminPanelComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          var _this = this;
+
+          this.svcSearch.sharedSearch.subscribe(function (search) {
+            return _this.search = search;
+          });
+        }
+      }, {
+        key: "submitSearch",
+        value: function submitSearch(value) {
+          this.svcSearch.nextSearch(value.title);
+        }
+      }, {
+        key: "initForm",
+        value: function initForm() {
+          this.searchForm = this.formBuilder.group({
+            title: ''
+          });
+        }
       }]);
 
       return AdminPanelComponent;
     }();
+
+    AdminPanelComponent.ctorParameters = function () {
+      return [{
+        type: src_app_shared_search_news_service__WEBPACK_IMPORTED_MODULE_2__["SearchNewsService"]
+      }, {
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]
+      }];
+    };
 
     AdminPanelComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-admin-panel',
@@ -1404,7 +1430,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             date: this.news.date,
             type: this.news.type,
             title: this.news.title,
-            image: this.news.image
+            image: this.news.image,
+            text: this.news.text
           });
         }
       }, {
@@ -1499,20 +1526,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var src_app_shared_news_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! src/app/shared/news.service */
     "./src/app/shared/news.service.ts");
+    /* harmony import */
+
+
+    var src_app_shared_search_news_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/shared/search-news.service */
+    "./src/app/shared/search-news.service.ts");
 
     var NewsListComponent =
     /*#__PURE__*/
     function () {
-      function NewsListComponent(svcNews) {
+      function NewsListComponent(svcNews, svcSearch) {
         _classCallCheck(this, NewsListComponent);
 
         this.svcNews = svcNews;
+        this.svcSearch = svcSearch;
         this.isAdmin = true;
       }
 
       _createClass(NewsListComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          var _this2 = this;
+
+          this.svcSearch.sharedSearch.subscribe(function (search) {
+            return _this2.search = search;
+          });
+        }
       }]);
 
       return NewsListComponent;
@@ -1521,6 +1561,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     NewsListComponent.ctorParameters = function () {
       return [{
         type: src_app_shared_news_service__WEBPACK_IMPORTED_MODULE_2__["NewsService"]
+      }, {
+        type: src_app_shared_search_news_service__WEBPACK_IMPORTED_MODULE_3__["SearchNewsService"]
       }];
     };
 
@@ -2009,9 +2051,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       _createClass(NewsFilterPipe, [{
         key: "transform",
-        value: function transform(news) {
-          var search = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-
+        value: function transform(news, search) {
           if (!search.trim()) {
             return news;
           }
@@ -2257,6 +2297,70 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     NewsService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: 'root'
     })], NewsService);
+    /***/
+  },
+
+  /***/
+  "./src/app/shared/search-news.service.ts":
+  /*!***********************************************!*\
+    !*** ./src/app/shared/search-news.service.ts ***!
+    \***********************************************/
+
+  /*! exports provided: SearchNewsService */
+
+  /***/
+  function srcAppSharedSearchNewsServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "SearchNewsService", function () {
+      return SearchNewsService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+
+    var SearchNewsService =
+    /*#__PURE__*/
+    function () {
+      function SearchNewsService() {
+        _classCallCheck(this, SearchNewsService);
+
+        this.search = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]('');
+        this.sharedSearch = this.search.asObservable();
+      }
+
+      _createClass(SearchNewsService, [{
+        key: "nextSearch",
+        value: function nextSearch(search) {
+          this.search.next(search);
+        }
+      }]);
+
+      return SearchNewsService;
+    }();
+
+    SearchNewsService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    })], SearchNewsService);
     /***/
   },
 

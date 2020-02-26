@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form class=\" text-center border-light p-5 form-horizontal\" [formGroup]=\"addForm\" (ngSubmit)=\"addNews(addForm.value)\">\n    <h1 class=\"h3 mb-3 font-weight-normal\" style=\"text-align: center\">Add News</h1>\n    <input class=\"form-control mb-4\" id=\"title\" type=\"text\" formControlName=\"title\" placeholder=\"Title\" required=\"\"\n        autofocus=\"\">\n    <input class=\"form-control mb-4\" id=\"type\" type=\"text\" formControlName=\"type\" placeholder=\"Type\" required=\"\"\n        autofocus=\"\">\n    <textarea class=\"form-control mb-4\" id=\"text\" type=\"text\" formControlName=\"text\" placeholder=\"Text...\"></textarea>\n    <input class=\"form-control mb-4\" id=\"date\" type=\"date\" formControlName=\"date\">\n    <input class=\"form-control mb-4\" id=\"image\" type=\"text\" formControlName=\"image\" placeholder=\"Image url\" required=\"\"\n        autofocus=\"\">\n    <button class=\"btn btn-lg btn-dark btn-block mb-4\" type=\"submit\">Create</button>\n    \n</form>");
+/* harmony default export */ __webpack_exports__["default"] = ("<form class=\" text-center border-light p-5 form-horizontal\" [formGroup]=\"addForm\" (ngSubmit)=\"addNews(addForm.value)\">\n    <h1 class=\"h3 mb-3 font-weight-normal\" style=\"text-align: center\">Add News</h1>\n    <input class=\"form-control mb-4\" id=\"title\" type=\"text\" formControlName=\"title\" placeholder=\"Title\" required=\"\"\n        autofocus=\"\">\n    <input class=\"form-control mb-4\" id=\"image\" type=\"text\" formControlName=\"image\" placeholder=\"Image url\" required=\"\"\n        autofocus=\"\">\n    <input class=\"form-control mb-4\" id=\"type\" type=\"text\" formControlName=\"type\" placeholder=\"Type\" required=\"\"\n        autofocus=\"\">\n    <textarea rows=\"8\" class=\"form-control mb-4\" id=\"text\" type=\"text\" formControlName=\"text\"\n        placeholder=\"Text...\"></textarea>\n    <input class=\"form-control mb-4\" id=\"date\" type=\"date\" formControlName=\"date\">\n    <button class=\"btn btn-lg btn-dark btn-block mb-4\" type=\"submit\">Create</button>\n\n</form>");
 
 /***/ }),
 
@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarTogglerDemo01\"\n    aria-controls=\"navbarTogglerDemo01\" aria-expanded=\"true\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <div class=\"collapse navbar-collapse \" id=\"navbarTogglerDemo01\">\n    <ul class=\"navbar-nav\">\n      <li class=\"p-2\">\n        <select class=\"custom-select\">\n          <option selected>Select news Source</option>\n          <option value=\"1\">BBC</option>\n          <option value=\"2\">Google news</option>\n          <option value=\"3\">Local</option>\n        </select>\n      </li>\n      <li class=\"p-2\">\n        <form class=\"form-inline\" [formGroup]=\"searchForm\" (ngSubmit)=\"submitSearch(searchForm.value)\">\n          <input class=\"form-control mr-sm-2\" id=\"title\" type=\"text\" formControlName=\"title\" placeholder=\"\" required=\"\"\n            autofocus=\"\">\n          <button class=\"btn btn-outline-danger my-2 my-sm-0\" type=\"submit\">Filter</button>\n        </form>\n      </li>\n      <li class=\"pl-5 pt-3\">\n        <input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"defaultCheck1\">\n        <label class=\"form-check-label text-dark\" for=\"defaultCheck1\">\n          only created by me\n        </label>\n      </li>\n    </ul>\n    <form class=\"ml-auto\">\n      <button [routerLink]=\"['/news/add']\" routerLinkActive=\"router-link-active\" class=\"btn btn-outline-danger\"\n        type=\"submit\">Add Article</button>\n    </form>\n  </div>\n</nav>");
+/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarTogglerDemo01\"\n    aria-controls=\"navbarTogglerDemo01\" aria-expanded=\"true\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <div class=\"collapse navbar-collapse \" id=\"navbarTogglerDemo01\">\n    <ul class=\"navbar-nav\">\n      <li class=\"p-2\">\n        <select class=\"custom-select\" (change)=\"this.changeNewsSource($event.target.value)\">\n          <option selected>Local</option>\n          <option value=\" BBC\">BBC</option>\n          <option value=\"Google\">Google news</option>    \n        </select>\n      </li>\n      \n      <li class=\"p-2\">\n        <form class=\"form-inline\" [formGroup]=\"searchForm\" (ngSubmit)=\"submitSearch(searchForm.value)\">\n          <input class=\"form-control mr-sm-2\" id=\"title\" type=\"text\" formControlName=\"title\"\n            placeholder=\"Filter Title...\" required=\"\" autofocus=\"\">\n          <button class=\"btn btn-outline-danger my-2 my-sm-0\" type=\"submit\">Filter</button>\n        </form>\n      </li>\n      <li class=\"pl-5 pt-3\">\n        <input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"defaultCheck1\">\n        <label class=\"form-check-label text-dark\" for=\"defaultCheck1\">\n          only created by me\n        </label>\n      </li>\n    </ul>\n    <form class=\"ml-auto\">\n      <button [routerLink]=\"['/news/add']\" routerLinkActive=\"router-link-active\" class=\"btn btn-outline-danger\"\n        type=\"submit\">Add Article</button>\n    </form>\n  </div>\n</nav>");
 
 /***/ }),
 
@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form class=\" text-center border-light p-5 form-horizontal\" [formGroup]=\"editForm\"\n    (ngSubmit)=\"editNews(editForm.value)\">\n    <h1 class=\"h3 mb-3 font-weight-normal\" style=\"text-align: center\">Edit News</h1>\n    <input class=\"form-control mb-4\" id=\"title\" type=\"text\" formControlName=\"title\" placeholder=\"Title\" required=\"\"\n        autofocus=\"\">\n    <input class=\"form-control mb-4\" id=\"type\" type=\"text\" formControlName=\"type\" placeholder=\"Type\" required=\"\"\n        autofocus=\"\">\n    <textarea class=\"form-control mb-4\" id=\"text\" type=\"text\" formControlName=\"text\" placeholder=\"Text...\"></textarea>\n    <input class=\"form-control mb-4\" id=\"date\" type=\"date\" formControlName=\"date\">\n    <input class=\"form-control mb-4\" id=\"image\" type=\"text\" formControlName=\"image\" placeholder=\"Image URL\" required=\"\"\n        autofocus=\"\">\n    <button class=\"btn btn-lg btn-dark btn-block mb-4\" type=\"submit\">Edit</button>\n</form>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<form class=\" text-center border-light p-5 form-horizontal \" [formGroup]=\"editForm\"\n    (ngSubmit)=\"editNews(editForm.value)\">\n    <h1 class=\"h3 mb-3 font-weight-normal\" style=\"text-align: center\">Edit News</h1>\n    <input class=\"form-control mb-4\" id=\"title\" type=\"text\" formControlName=\"title\" placeholder=\"Title\" required=\"\"\n        autofocus=\"\">\n    <input class=\"form-control mb-4\" id=\"image\" type=\"text\" formControlName=\"image\" placeholder=\"Image URL\" required=\"\"\n        autofocus=\"\">\n    <input class=\"form-control mb-4\" id=\"type\" type=\"text\" formControlName=\"type\" placeholder=\"Type\" required=\"\"\n        autofocus=\"\">\n    <textarea rows=\"8\" class=\"form-control mb-4\" id=\"text\" type=\"text\" formControlName=\"text\"\n        placeholder=\"Text...\"></textarea>\n    <input class=\"form-control mb-4\" id=\"date\" type=\"date\" formControlName=\"date\">\n    <button class=\"btn btn-lg btn-dark btn-block mb-4\" type=\"submit\">Edit</button>\n</form>");
 
 /***/ }),
 
@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"!this.hideNewsList\">\n    <div *ngFor=\"let news of this.svcNews.getNewsList() | newsFilter:search\" class=\"row p-2\">\n        <div class=\"col-sm-4\">\n            <a [routerLink]=\"['/news', news.id]\" routerLinkActive=\"\"><img class=\"img-thumbnail\"\n                    src=\"{{news.image}}\"></a>\n        </div>\n        <div class=\"col-sm-4\">\n            <div class=\"module\">\n                <h5>{{news.title}}</h5>\n                <p class=\"collapse \" id=\"collapse{{news.id}}\" aria-expanded=\"false\">\n                    {{news.text}}\n                </p>\n                <a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" href=\"#collapse{{news.id}}\"\n                    aria-expanded=\"false\" aria-controls=\"collapse{{news.id}}\"></a>\n            </div>\n        </div>\n        <div class=\"col-sm-2 small\">{{news.date}}</div>\n        <div class=\"col-sm-2\">\n            <button [routerLink]=\"['/news/edit', news.id]\" type=\"button\"\n                class=\"btn btn-secondary btn-sm btn-block\">Edit</button>\n            <button (click)=\"this.svcNews.remove(news.id)\" type=\"button\"\n                class=\"btn btn-danger btn-sm btn-block\">Delete</button>\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"!this.hideNewsList\">\n    <div *ngFor=\"let news of this.svcNews.getNewsList() | newsFilter:search ; let i = index\" class=\"row p-1\"\n        [attr.data-index]=\"i\">\n        <div *ngIf=\"i < this.currentNewsQty\" class=\"row\">\n            <div class=\"col-sm-4\">\n                <a [routerLink]=\"['/news', news.id]\" routerLinkActive=\"\"><img class=\"img-thumbnail\"\n                        src=\"{{news.image}}\"></a>\n            </div>\n            <div class=\"col-sm-4\">\n                <div class=\"module\">\n                    <h5>{{news.title}}</h5>\n                    <p class=\"collapse \" id=\"collapse{{news.id}}\" aria-expanded=\"false\">\n                        {{news.text}}\n                    </p>\n                    <a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" href=\"#collapse{{news.id}}\"\n                        aria-expanded=\"false\" aria-controls=\"collapse{{news.id}}\"></a>\n                </div>\n            </div>\n            <div class=\"col-sm-2 small\">{{news.date| date}}</div>\n            <div class=\"col-sm-2\">\n                <button [routerLink]=\"['/news/edit', news.id]\" type=\"button\"\n                    class=\"btn btn-secondary btn-sm btn-block\">Edit</button>\n                <button (click)=\"this.svcNews.remove(news.id)\" type=\"button\"\n                    class=\"btn btn-danger btn-sm btn-block\">Delete</button>\n            </div>\n        </div>\n    </div>\n    <button (click)=\"loadMore()\" class=\"btn btn-secondary btn-sm btn-block\">Load more</button>\n</div>");
 
 /***/ }),
 
@@ -110,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"text-center\">{{this.news.title}}</h1>\n\n<div class=\"d-flex justify-content-center\">\n    <img src=\"{{this.news.image}}\" class=\"img-fluid rounded col-lg-8\">\n</div>\n<div class=\"blog-main\">\n    <div class=\"blog-post\">\n        <p class=\"blog-post-meta\">{{this.news.date}}</p>\n        {{this.news.text}}\n    </div>\n\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"text-center\">{{this.news.title}}</h1>\n\n<div class=\"d-flex justify-content-center\">\n    <img src=\"{{this.news.image}}\" class=\"img-fluid rounded col-lg-8\">\n</div>\n<div class=\"blog-main\">\n    <div class=\"blog-post\">\n        <p class=\"blog-post-meta\">{{this.news.date | date}}</p>\n        {{this.news.text}}\n    </div>\n\n</div>");
 
 /***/ }),
 
@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<header class=\"sticky-top text-white\">\n  <nav class=\"navbar bg-danger\">\n    <a class=\"navbar-brand text-light\" [routerLink]=\"['/news']\">\n      <img src=\"assets/images/newspaper.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top inverted\" alt=\"\">\n      NEWS\n    </a>\n    <form class=\"form-inline my-2 \">\n      <p class=\"my-2 my-sm-0 px-3\">\n        <img src=\"https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person-fill.svg\" class=\"inverted\" width=\"30\"\n          height=\"30\" alt=\"\">\n        User</p>\n      <button class=\"btn btn-danger active my-2 my-sm-0\" type=\"submit\">Log out</button>\n    </form>\n  </nav>\n  <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <div class=\"mx-auto\">\n      <h2>Source</h2>\n    </div>\n  </nav>\n  <app-admin-panel></app-admin-panel>\n</header>");
+/* harmony default export */ __webpack_exports__["default"] = ("<header class=\"sticky-top text-white\">\n  <nav class=\"navbar bg-danger\">\n    <a class=\"navbar-brand text-light\" [routerLink]=\"['/news']\">\n      <img src=\"assets/images/newspaper.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top inverted\" alt=\"\">\n      NEWS\n    </a>\n    <form class=\"form-inline my-2 \">\n      <p class=\"my-2 my-sm-0 px-3\">\n        <img src=\"https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person-fill.svg\" class=\"inverted\" width=\"30\"\n          height=\"30\" alt=\"\">\n        User</p>\n      <button class=\"btn btn-danger active my-2 my-sm-0\" type=\"submit\">Log out</button>\n    </form>\n  </nav>\n  <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <div class=\"mx-auto\">\n      <h2>{{this.newsSource}}</h2>\n    </div>\n  </nav>\n  <app-admin-panel (newsSource)='receiveNewsSource($event)'></app-admin-panel>\n</header>");
 
 /***/ }),
 
@@ -412,6 +412,7 @@ const routes = [
     { path: 'news/edit/:id', component: _news_admin_edit_form_edit_form_component__WEBPACK_IMPORTED_MODULE_5__["EditFormComponent"] },
     { path: 'news/add', component: _news_admin_add_form_add_form_component__WEBPACK_IMPORTED_MODULE_6__["AddFormComponent"] },
     { path: 'news/:id', component: _news_view_news_view_news_component__WEBPACK_IMPORTED_MODULE_3__["ViewNewsComponent"] },
+    { path: '**', redirectTo: '/news', pathMatch: 'full' },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -653,9 +654,11 @@ let AdminPanelComponent = class AdminPanelComponent {
     constructor(svcSearch, formBuilder) {
         this.svcSearch = svcSearch;
         this.formBuilder = formBuilder;
+        this.newsSource = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.initForm();
     }
     ngOnInit() {
+        this.newsSource.emit('Local');
         this.svcSearch.sharedSearch.subscribe(search => this.search = search);
     }
     submitSearch(value) {
@@ -666,11 +669,18 @@ let AdminPanelComponent = class AdminPanelComponent {
             title: ''
         });
     }
+    changeNewsSource(newsSource) {
+        console.log(newsSource);
+        this.newsSource.emit(newsSource);
+    }
 };
 AdminPanelComponent.ctorParameters = () => [
     { type: src_app_shared_search_news_service__WEBPACK_IMPORTED_MODULE_2__["SearchNewsService"] },
     { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] }
 ];
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], AdminPanelComponent.prototype, "newsSource", void 0);
 AdminPanelComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-admin-panel',
@@ -796,10 +806,21 @@ let NewsListComponent = class NewsListComponent {
     constructor(svcNews, svcSearch) {
         this.svcNews = svcNews;
         this.svcSearch = svcSearch;
+        this.maxNewsQty = this.svcNews.getNewsList().length;
+        this.increseQty = 5;
+        this.currentNewsQty = this.increseQty;
         this.isAdmin = true;
     }
     ngOnInit() {
         this.svcSearch.sharedSearch.subscribe(search => this.search = search);
+    }
+    loadMore() {
+        if (this.currentNewsQty + this.increseQty < this.maxNewsQty) {
+            this.currentNewsQty += this.increseQty;
+        }
+        else if (this.currentNewsQty < this.maxNewsQty) {
+            this.currentNewsQty = this.maxNewsQty;
+        }
     }
 };
 NewsListComponent.ctorParameters = () => [
@@ -996,8 +1017,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let HeaderComponent = class HeaderComponent {
-    constructor() { }
+    constructor() {
+    }
     ngOnInit() {
+    }
+    receiveNewsSource($event) {
+        this.newsSource = $event;
     }
 };
 HeaderComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([

@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"!this.hideNewsList\">\n    <div *ngFor=\"let news of this.svcNews.getNewsList() | newsFilter:search ; let i = index\" class=\"row p-1\"\n        [attr.data-index]=\"i\">\n        <div *ngIf=\"i < this.currentNewsQty\" class=\"row\">\n            <div class=\"col-sm-4\">\n                <a [routerLink]=\"['/news', news.id]\" routerLinkActive=\"\"><img class=\"img-thumbnail\"\n                        src=\"{{news.image}}\"></a>\n            </div>\n            <div class=\"col-sm-4\">\n                <div class=\"module\">\n                    <h5>{{news.title}}</h5>\n                    <p class=\"collapse \" id=\"collapse{{news.id}}\" aria-expanded=\"false\">\n                        {{news.text}}\n                    </p>\n                    <a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" href=\"#collapse{{news.id}}\"\n                        aria-expanded=\"false\" aria-controls=\"collapse{{news.id}}\"></a>\n                </div>\n            </div>\n            <div class=\"col-sm-2 small\">{{news.date| date}}</div>\n            <div class=\"col-sm-2\">\n                <button [routerLink]=\"['/news/edit', news.id]\" type=\"button\"\n                    class=\"btn btn-secondary btn-sm btn-block\">Edit</button>\n                <button (click)=\"this.svcNews.remove(news.id)\" type=\"button\"\n                    class=\"btn btn-danger btn-sm btn-block\">Delete</button>\n            </div>\n        </div>\n    </div>\n    <button (click)=\"loadMore()\" class=\"btn btn-secondary btn-sm btn-block\">Load more</button>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"!this.hideNewsList\">\n    <div *ngFor=\"let news of this.svcNews.getNewsList() | newsFilter:search ; let i = index\" class=\"row p-1\"\n        [attr.data-index]=\"i\">\n        <div *ngIf=\"i < this.currentNewsQty\" class=\"row\">\n            <div class=\"col-sm-4\">\n                <a [routerLink]=\"['/news', news.id]\" routerLinkActive=\"\"><img class=\"img-thumbnail\"\n                        src=\"{{news.image}}\"></a>\n            </div>\n            <div class=\"col-sm-4\">\n                <div class=\"module\">\n                    <h5>{{news.title}}</h5>\n                    <p class=\"collapse \" id=\"collapse{{news.id}}\" aria-expanded=\"false\">\n                        {{news.text}}\n                    </p>\n                    <a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" href=\"#collapse{{news.id}}\"\n                        aria-expanded=\"false\" aria-controls=\"collapse{{news.id}}\"></a>\n                </div>\n            </div>\n            <div class=\"col-sm-2 small\">{{news.date| date}}</div>\n            <div class=\"col-sm-2\">\n                <button [routerLink]=\"['/news/edit', news.id]\" type=\"button\"\n                    class=\"btn btn-secondary btn-sm btn-block\">Edit</button>\n                <button (click)=\"this.svcNews.remove(news.id)\" type=\"button\"\n                    class=\"btn btn-danger btn-sm btn-block\">Delete</button>\n            </div>\n        </div>\n    </div>\n    <div *ngIf=\"this.currentNewsQty != this.maxNewsQty\">\n        <button (click)=\"loadMore()\" class=\"btn btn-secondary btn-sm btn-block\">Load more</button>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -807,16 +807,16 @@ let NewsListComponent = class NewsListComponent {
         this.svcNews = svcNews;
         this.svcSearch = svcSearch;
         this.maxNewsQty = this.svcNews.getNewsList().length;
-        this.increseQty = 5;
-        this.currentNewsQty = this.increseQty;
+        this.difference = 5;
+        this.currentNewsQty = this.difference;
         this.isAdmin = true;
     }
     ngOnInit() {
         this.svcSearch.sharedSearch.subscribe(search => this.search = search);
     }
     loadMore() {
-        if (this.currentNewsQty + this.increseQty < this.maxNewsQty) {
-            this.currentNewsQty += this.increseQty;
+        if (this.currentNewsQty + this.difference < this.maxNewsQty) {
+            this.currentNewsQty += this.difference;
         }
         else if (this.currentNewsQty < this.maxNewsQty) {
             this.currentNewsQty = this.maxNewsQty;

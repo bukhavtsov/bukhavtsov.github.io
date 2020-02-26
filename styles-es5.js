@@ -9,7 +9,7 @@
 
   /***/
   function node_modulesAngularDevkitBuildAngularSrcAngularCliFilesPluginsRawCssLoaderJsNode_modulesPostcssLoaderSrcIndexJsNode_modulesSassLoaderDistCjsJsSrcStylesScss(module, exports) {
-    module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2J1a2hhdXRzb3UvYW5ndWxhci9idWtoYXV0c291L25ld3MvY2xpZW50L3NyYy9zdHlsZXMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw4RUFBQSIsImZpbGUiOiJzcmMvc3R5bGVzLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBZb3UgY2FuIGFkZCBnbG9iYWwgc3R5bGVzIHRvIHRoaXMgZmlsZSwgYW5kIGFsc28gaW1wb3J0IG90aGVyIHN0eWxlIGZpbGVzICovXG4iXX0= */", '', '']];
+    module.exports = [[module.i, "@import url(\"https://fonts.googleapis.com/css?family=Noto+Sans|Roboto&display=swap\");\nhtml, body {\n  font-family: \"Roboto\";\n  font-family: \"Noto Sans\";\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2J1a2hhdXRzb3UvYW5ndWxhci9idWtoYXV0c291L25ld3MvY2xpZW50L3NyYy9zdHlsZXMuc2NzcyIsInNyYy9zdHlsZXMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBUSxvRkFBQTtBQUNSO0VBQ0kscUJBQUE7RUFDQSx3QkFBQTtBQ0NKIiwiZmlsZSI6InNyYy9zdHlsZXMuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgdXJsKCdodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9Tm90bytTYW5zfFJvYm90byZkaXNwbGF5PXN3YXAnKTtcbmh0bWwsIGJvZHkge1xuICAgIGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgO1xuICAgIGZvbnQtZmFtaWx5OiAnTm90byBTYW5zJywgO1xufSIsIkBpbXBvcnQgdXJsKFwiaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PU5vdG8rU2Fuc3xSb2JvdG8mZGlzcGxheT1zd2FwXCIpO1xuaHRtbCwgYm9keSB7XG4gIGZvbnQtZmFtaWx5OiBcIlJvYm90b1wiO1xuICBmb250LWZhbWlseTogXCJOb3RvIFNhbnNcIjtcbn0iXX0= */", '', '']];
     /***/
   },
 

@@ -1,37 +1,426 @@
+
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artsiom Bukhautsou</title>
-    <link rel="stylesheet" href="style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>bukhautsou</title>
+	<meta name="description" content="Artsiom Bukhautsou">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/all.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/slick.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-
 <body>
-    <img class="annotation-icon" src="./assets/annotation.png" alt="annotation-icon">
-    <div class="container">
-        <div class="person-description">
-            <div class="person-photo">
-                <img src="./assets/person-photo.jpg" alt="person-photo">
-            </div>
-            <p>
-                <strong>Artsiom Bukhautsou</strong>
-                <br>Software Engineer
-                <br>with experience in Golang and Angular 8
-            </p>
-        </div>
-        <div class="link-tree">
-            <div class="elements">
-                <a class="element" href="mailto:artyom.bukhavtsov@gmail.com">gmail</a>
-                <a class="element" href="https://join.skype.com/invite/bSkddOgimYQn">skype</a>
-                <a class="element" href="https://t.me/bukhautsou">telegram</a>
-                <a class="element" href="https://www.linkedin.com/in/bukhautsou">linkedin</a>
-                <a class="element" href="https://github.com/bukhavtsov">github</a>
-                <a class="element" href="./assets/resume.pdf">resume</a>
-            </div>
-        </div>
-    </div>
-</body>
+<!-- preloader -->
+<div id="preloader">
+	<div class="outer">
+		<div class="spinner">
+			<div class="dot1"></div>
+			<div class="dot2"></div>
+		</div>
+	</div>
+</div>
 
+<!-- site wrapper -->
+<div class="site-wrapper">
+
+	<!-- mobile header -->
+	<div class="mobile-header py-2 px-3 mt-4">
+		<button class="menu-icon mr-2">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<a href="index.html" class="logo"></></a>
+		<a href="index.html" class="site-title dot ml-2">Artsiom Bukhautsou</a>
+	</div>
+
+	<!-- header -->
+	<header class="left float-left shadow-dark" id="header">
+		<button type="button" class="close" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<div class="header-inner d-flex align-items-start flex-column">
+			<a href="index.html"><img src="images/avatar_s.png" alt="Artsiom Bukhautsou" /></a>
+			<a href="index.html" class="site-title dot mt-3">Artsiom Bukhautsou</a>
+			<span class="site-slogan">Full Stack Software Developer</span>
+
+			<!-- navigation menu -->
+			<nav>
+				<ul class="vertical-menu scrollspy">
+					<li><a href="#home" class="active"><i class="icon-home"></i>Home</a></li>
+					<li><a href="#about"><i class="icon-user"></i>About</a></li>
+					<li><a href="#services"><i class="icon-bulb"></i>Services</a></li>
+					<li><a href="#resume"><i class="icon-graduation"></i>Resume</a></li>
+					<li><a href="#contact"><i class="icon-phone"></i>Contact</a></li>
+				</ul>
+			</nav>
+
+			<!-- footer -->
+			<div class="footer mt-auto">
+
+				<!-- social icons -->
+				<ul class="social-icons list-inline">
+					<li class="list-inline-item"><a href="https://github.com/bukhavtsov"><i class="fab fa-github"></i></a></li>
+					<li class="list-inline-item"><a href="https://www.linkedin.com/in/bukhautsou"><i class="fab fa-linkedin"></i></a></li>
+					<li class="list-inline-item"><a href="https://www.instagram.com/bukhavtsov"><i class="fab fa-instagram"></i></a></li>
+				</ul>
+
+				<!-- copyright -->
+				<span class="copyright">© 2021 bukhautsou</span>
+			</div>
+		</div>
+	</header>
+
+	<!-- main content area -->
+	<main class="content float-right">
+
+		<!-- section hero -->
+		<section class="hero background parallax shadow-dark d-flex align-items-center" id="home"
+			data-image-src="images/avatar.jpg">
+			<div class="cta mx-auto mt-2">
+				<h1 class="mt-0 mb-4">I’m Artsiom<span class="dot"></span></h1>
+				<p class="mb-4">
+					An experienced Full Stack Software Developer with expertise in Web Development. Flexible, stress-resistant and self-organized individual with good communication skills and ability to articulate opinions to steer future development.<br>
+					Actively participate and contribute to the Golang community: presenting tech talks, conducting Golang training for students
+				</p>
+				<a href="https://github.com/bukhavtsov" class="btn btn-default btn-lg mr-3"><i class="icon-grid"></i>View
+					Portfolio</a>
+				<div class="spacer d-md-none d-lg-none d-sm-none" data-height="10"></div>
+				<a href="#contact" class="btn btn-border-light btn-lg"><i class="icon-envelope"></i>Work with me</a>
+			</div>
+			<div class="overlay"></div>
+		</section>
+
+		<!-- section about -->
+		<section id="about" class="shadow-blue white-bg padding">
+			<h3 class="section-title">About Me</h3>
+			<div class="spacer" data-height="80"></div>
+
+			<div class="row">
+				<div class="col-md-3">
+					<img src="images/avatar_m.png" alt="about" />
+				</div>
+				<div class="col-md-9">
+					<h2 class="mt-4 mt-md-0 mb-4">Hello,</h2>
+					<p class="mb-0">I work as a Full Stack developer at EPAM Systems. I specifically focus on the backend development on Golang and UX implementation on Angular Framework
+						</p>
+					<div class="row my-4">
+						<div class="col-md-6">
+							<p class="mb-2">Name: <span class="text-dark">Artsiom Bukhautsou</span></p>
+						</div>
+						<div class="col-md-6 mt-2 mt-md-0 mt-sm-2">
+							<p class="mb-2">Location: <span class="text-dark">Belarus, Gomel</span></p>
+							<p class="mb-0">Email: <span class="text-dark">artyom.bukhavtsov@gmail.com</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- section skills -->
+		<section id="skills" class="shadow-blue white-bg padding">
+			<h3 class="section-title">My skills</h3>
+			<div class="spacer" data-height="80"></div>
+			<p class="mb-0">Actually, I’ve been in the IT industry for close to 3 years. I started kind of on the frontend side for a bit, went over to backend development and continue working on this way.</p>
+			<div class="row mt-5">
+				<div class="col-md-6">
+					<!-- skill item -->
+					<div class="skill-item">
+						<div class="skill-info clearfix">
+							<h4 class="float-left mb-3 mt-0">Go</h4>
+							<span class="float-right">95%</span>
+						</div>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="95">
+							</div>
+						</div>
+						<div class="spacer" data-height="40"></div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<!-- skill item -->
+					<div class="skill-item">
+						<div class="skill-info clearfix">
+							<h4 class="float-left mb-3 mt-0">Angular</h4>
+							<span class="float-right">80%</span>
+						</div>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
+							</div>
+						</div>
+						<div class="spacer" data-height="40"></div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<!-- skill item -->
+					<div class="skill-item">
+						<div class="skill-info clearfix">
+							<h4 class="float-left mb-3 mt-0">Kubernetes & Docker</h4>
+							<span class="float-right">85%</span>
+						</div>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
+							</div>
+						</div>
+						<div class="spacer" data-height="40"></div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<!-- skill item -->
+					<div class="skill-item">
+						<div class="skill-info clearfix">
+							<h4 class="float-left mb-3 mt-0">GCP</h4>
+							<span class="float-right">70%</span>
+						</div>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70">
+							</div>
+						</div>
+						<div class="spacer" data-height="40"></div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<!-- skill item -->
+					<div class="skill-item">
+						<div class="skill-info clearfix">
+							<h4 class="float-left mb-3 mt-0">Git & CI/CD</h4>
+							<span class="float-right">90%</span>
+						</div>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90">
+							</div>
+						</div>
+						<div class="spacer d-md-none d-lg-none" data-height="40"></div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<!-- skill item -->
+					<div class="skill-item">
+						<div class="skill-info clearfix">
+							<h4 class="float-left mb-3 mt-0">TypeScript</h4>
+							<span class="float-right">70%</span>
+						</div>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- section services -->
+		<section id="services" class="shadow-blue white-bg padding">
+			<h3 class="section-title">Services</h3>
+			<div class="spacer" data-height="80"></div>
+
+			<div class="row">
+
+				<div class="col-md-4 col-sm-6">
+					<!-- service item -->
+					<div class="service-item text-center">
+						<i class="icon-globe icon-simple"></i>
+						<h4 class="my-3">Coding</h4>
+						<p class="mb-0">Developing web applications in Go/Angular/GCP.</p>
+					</div>
+					<div class="spacer" data-height="20"></div>
+				</div>
+
+				<div class="col-md-4 col-sm-6">
+					<!-- service item -->
+					<div class="service-item text-center">
+						<i class="icon-chemistry icon-simple"></i>
+						<h4 class="my-3">Build</h4>
+						<p class="mb-0">Setup any OpenSource system, DNS and VPS included.</p>
+					</div>
+					<div class="spacer" data-height="20"></div>
+				</div>
+
+				<div class="col-md-4 col-sm-6">
+					<!-- service item -->
+					<div class="service-item text-center">
+						<i class="icon-directions icon-simple"></i>
+						<h4 class="my-3">Deployment</h4>
+						<p class="mb-0">Make a auto deployment pipeline solution.</p>
+					</div>
+					<div class="spacer" data-height="20"></div>
+				</div>
+
+				<div class="col-md-4 col-sm-6">
+					<!-- service item -->
+					<div class="service-item text-center">
+						<i class="icon-rocket icon-simple"></i>
+						<h4 class="my-3">Refactoring</h4>
+						<p class="mb-0">Replace legacy with modern solution.</p>
+					</div>
+					<div class="spacer d-md-none d-lg-none" data-height="20"></div>
+				</div>
+
+				<div class="col-md-4 col-sm-6">
+					<!-- service item -->
+					<div class="service-item text-center">
+						<i class="icon-note icon-simple"></i>
+						<h4 class="my-3">Architect</h4>
+						<p class="mb-0">Design a solution for a complex web applications.</p>
+					</div>
+					<div class="spacer d-md-none d-lg-none" data-height="20"></div>
+				</div>
+
+				<div class="col-md-4 col-sm-6">
+					<!-- service item -->
+					<div class="service-item text-center">
+						<i class="icon-bubbles icon-simple"></i>
+						<h4 class="my-3">Support</h4>
+						<p class="mb-0">Your best consultant. Ask me for any questions.</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- section experience -->
+		<section id="resume" class="shadow-blue white-bg padding">
+			<h3 class="section-title">Experience</h3>
+			<div class="spacer" data-height="80"></div>
+
+			<!-- timeline -->
+			<div class="timeline">
+				<div class="entry">
+					<div class="title">
+						<span>2019 - Present</span>
+					</div>
+					<div class="body">
+						<h4 class="mt-0">EPAM Systems - Software Developer</h4>
+						<p>
+							<ul>
+								<li> Full Stack Development of large and complex enterprise web solutions</li>
+								<li> Development of microservices in Golang and deployment to Kubernetes</li>
+								<li> Coding standard best practices</li>
+								<li> Clean codewriting </li>
+								<li> Code refactoring and optimization</li>
+								<li> Working with international distributed teams</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+		</section>
+
+		<!-- section contact -->
+		<section id="contact" class="shadow-blue white-bg padding">
+			<h3 class="section-title">Get in touch</a></h3>
+			<div class="spacer" data-height="80"></div>
+
+			<div class="row">
+
+				<div class="col-md-4 mb-4 mb-md-0">
+					<!-- contact info -->
+					<div class="contact-info mb-5">
+						<i class="icon-phone"></i>
+						<div class="details">
+							<h5>Phone</h5>
+							<span>+375445673922</span>
+						</div>
+					</div>
+					<div class="contact-info mb-5">
+						<i class="icon-envelope"></i>
+						<div class="details">
+							<h5>Email address</h5>
+							<span>artyom.bukhavtsov@gmail.com</span>
+						</div>
+					</div>
+					<div class="contact-info">
+						<i class="icon-location-pin"></i>
+						<div class="details">
+							<h5>Location</h5>
+							<span>Belarus, Gomel</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-8">
+					<!-- Contact Form -->
+					<form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/xrgoowrz">
+						<div class="messages"></div>
+						<div class="row">
+							<div class="column col-md-6">
+								<!-- Name input -->
+								<div class="form-group">
+									<input type="text" class="form-control" name="name" id="InputName" placeholder="Your name" required="required"
+										data-error="Name is required.">
+									<div class="help-block with-errors"></div>
+								</div>
+							</div>
+							<div class="column col-md-6">
+								<!-- Email input -->
+								<div class="form-group">
+									<input type="email" class="form-control" id="InputEmail" name="_replyto" placeholder="Email address"
+										required="required" data-error="Email is required.">
+									<div class="help-block with-errors"></div>
+								</div>
+							</div>
+							<div class="column col-md-12">
+								<!-- Email input -->
+								<div class="form-group">
+									<input type="text" class="form-control" id="InputSubject" name="_subject" placeholder="Subject"
+										required="required" data-error="Subject is required.">
+									<div class="help-block with-errors"></div>
+								</div>
+							</div>
+							<div class="column col-md-12">
+								<!-- Message textarea -->
+								<div class="form-group">
+									<textarea name="message" id="InputMessage" class="form-control" rows="5" placeholder="Message"
+										required="required" data-error="Message is required."></textarea>
+									<div class="help-block with-errors"></div>
+								</div>
+							</div>
+						</div>
+						<button type="submit" name="submit" id="submit" value="Submit" class="btn btn-default"><i class="icon-paper-plane"></i>Send Message</button><!-- Send Button -->
+					</form>
+					<!-- Contact Form end -->
+				</div>
+
+			</div>
+
+		</section>
+
+	</main>
+
+</div>
+
+<!-- Go to top button -->
+<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- SCRIPTS -->
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/infinite-scroll.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/validator.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
 </html>

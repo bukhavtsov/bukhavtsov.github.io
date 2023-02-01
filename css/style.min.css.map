@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "/Users/Artsiom_Bukhautsou/go/src/github.com/bukhavtsov/artem-codes-personal-website",
+	"sourceRoot": "/home/runner/work/bukhavtsov.github.io/bukhavtsov.github.io",
 	"sources": [
 		"themes/loveit/assets/css/style.scss",
 		"themes/loveit/assets/lib/normalize/normalize.css",

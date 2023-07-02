@@ -30,7 +30,7 @@ canonifyURLs = true
   title = "ArtemCodes"
   # website description for RSS, SEO, Open Graph and Twitter Cards
   # 网站描述, 用于 RSS, SEO, Open Graph 和 Twitter Cards
-  description = "Hi there! My name is Artem, let's build something amazing together!"
+  description = "Hi there! My name is Artem, Let's build something amazing together!"
   # website images for Open Graph and Twitter Cards
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = []
@@ -188,7 +188,7 @@ canonifyURLs = true
       title = ""
       # subtitle shown in home page (HTML format is supported)
       # 主页显示的网站副标题 (允许 HTML 格式)
-      subtitle = "Hi there! My name is Artem, welcome to my personal website!"
+      subtitle = "Hi there! My name is Artem, Let's build something amazing together!"
       # whether to use typeit animation for subtitle
       # 是否为副标题显示打字机动画
       typeit = true

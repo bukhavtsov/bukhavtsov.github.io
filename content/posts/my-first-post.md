@@ -6,7 +6,7 @@ draft: false
 # Big O Notation
 # Begin
 
-Hello everybody and welcome back. My name is Artem and blog post we're going to understand what does Big O notation mean and consider the time complexity. So, Let's get to it!
+Hello everybody and welcome back. My name is Artem and in this blog post we're going to understand what does Big O notation mean and consider the time complexity. So, Let's get to it!
 
 ## Agenda:
 - Why it's essential to understand and master Big O?
@@ -68,3 +68,8 @@ On this example we can see the linear complexity
 - When we have something which is nested in the loop, then we multiply the complexity.
 - Complexity for each input is calculated separately if they don't have the same length.
 - Drop the less significant terms.
+
+# Bonus
+If you want to dig deeper to this topic, watch the video!
+{{< youtube RWg_UOD98v0>}}
+ 

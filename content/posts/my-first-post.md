@@ -22,12 +22,12 @@ Hello everybody and welcome back. My name is Artem and in this blog post we're g
 - Finally, most likely that you'll not pass a coding interview without mastering this topic.
 
 
-# Big O definition
+## Big O definition
 **Big O time** is the language and metric that describes the efficiency of algorithms.
 Or to be more precise **the way to describe how long algorithm performs as it's input size growth.**  
 
 
-# Big O explanation with an example
+## Big O explanation with an example
 with liner complexity
 
 ```go
@@ -61,7 +61,7 @@ On this example we can see the linear complexity
 
 
 
-# Considerations
+## Considerations
 
 - When we have something which is not nested in the loop, then we summarise the complexity.
 - When we calculate big o we usually remove all of the constants
@@ -69,7 +69,7 @@ On this example we can see the linear complexity
 - Complexity for each input is calculated separately if they don't have the same length.
 - Drop the less significant terms.
 
-# Bonus
+## Bonus
 If you want to dig deeper to this topic, watch the video!
 {{< youtube RWg_UOD98v0>}}
  

@@ -20,9 +20,9 @@ Hey there, fellow learners! I'm Artem, and today's lesson is all about the incre
 - To understand two pointers technique you should be familiar with the data structures like arrays and linked lists, and master Big O notation. If you feel like you may need to ramp up your knowledge in understanding big o notation, I recommend you to watch my video about it.
  - Two pointers basically mean that you have 2 variables, and values of them are looking into addresses in memory. 
  - On the Figure 1, you can see how arrays look like under the hood. Each element has own index, value and address. 
-![Figure 1 - Array under the hood](2ptrs-ex-01.png "Figure 1 - Array under the hood")
+![Figure 1 - Array under the hood](/images/2ptrs-ex-01.png "Figure 1 - Array under the hood")
  - On the Figure 2, we've created two variables `left` and `right` and values of these variables are address 1000 and 1004. Basically it means that If element with address 1000 will be changed, then `left` variable will be changed as well. The same for 1004 address and `right` variable.
-![Figure 2 - Pointers](2prtrs-ex-02.png "Figure 2 - Pointers")
+![Figure 2 - Pointers](/images/2prtrs-ex-02.png "Figure 2 - Pointers")
 - These pointers allow you to track the state of 2 elements at once, during iteration through collection. Collection usually is an array, linked list and this technique cannot be used directly with non-linear data structures. 
 - Usually, depending on the problem, these pointers have name right and left, or slow and fast. If you wondering why, stay tuned :).
 
@@ -33,6 +33,7 @@ https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 ### Example that can be solved in Space: O(1) TIme: O(n^2)
 
 Here we're trying to check all possible sum combination between 2 elements in the given array. But the problem is the it takes quite long period of time for machine to process. Let's check benchmark test.
+
 ```go
 package main
 
@@ -148,7 +149,8 @@ func main() {
 
 	benchmarkResult10000 := testing.Benchmark(BenchmarkTwoSum10000)
 	fmt.Println("BenchmarkTwoSum10000:", benchmarkResult10000)
-}```
+}
+```
 
 Benchmark results:
 ```bash

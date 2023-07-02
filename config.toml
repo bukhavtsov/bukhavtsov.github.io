@@ -182,7 +182,7 @@ canonifyURLs = true
       gravatarEmail = ""
       # URL of avatar shown in home page
       # 主页显示头像的 URL
-      avatarURL = "https://media-exp1.licdn.com/dms/image/D4D03AQGIaykNVYKo6Q/profile-displayphoto-shrink_200_200/0/1666894998658?e=1674691200&v=beta&t=FvEyi9I4yxNKZy-RiIOwjl1hbPoLCo3YQx-fjMRH9ec"
+      avatarURL = "/images/avatar.jpeg"
       # title shown in home page (HTML format is supported)
       # 主页显示的网站标题 (支持 HTML 格式)
       title = ""
@@ -529,8 +529,8 @@ canonifyURLs = true
       # Publisher info
       # 出版者信息
       [params.page.seo.publisher]
-        name = ""
-        logoUrl = ""
+        name = "Artem Codes"
+        logoUrl = "/images/avatar.jpeg"
 
   # TypeIt config
   # TypeIt 配置

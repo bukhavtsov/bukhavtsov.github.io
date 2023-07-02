@@ -1,0 +1,4 @@
+baseURL = 'https://artem.codes'
+languageCode = 'en-us'
+title = 'ArtemCodes'
+theme = 'loveit'

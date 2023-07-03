@@ -1,3 +1,8 @@
+---
+title: "The Incredible Two Pointers technique"
+date: 2023-07-01T22:40:00+01:00
+draft: false 
+---
 Hey there, fellow learners! I'm Artem, and today's lesson is all about the incredible Two Pointers technique.
 
 ## What is the benefit of two pointers technique?

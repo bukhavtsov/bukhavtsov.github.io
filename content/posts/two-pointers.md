@@ -1,39 +1,30 @@
----
-title: "The increadible Two Pointers Technique"
-date: 2023-07-02T22:40:00+01:00
-draft: false
----
-# Agenda
-1. What is the benefit of two pointers technique?
-2. What is two pointers technique?
-3. Example that shows the a performance difference.
-4. The details of two pointers solution.
-5. Problem with fast & slow pointer. (TODO: Describe details§)
-7. Summary (TODO)
-
 Hey there, fellow learners! I'm Artem, and today's lesson is all about the incredible Two Pointers technique.
 
 ## What is the benefit of two pointers technique?
-- Before we start digging into this technique, I want to tell you about the benefit. Two pointers technique can dramatically improve the performance of your solution. It allows you to move from `O(n^2)`, `O(n log n)` time complexity to `O(n)`
+
+Before we start digging into this technique, I want to tell you about the benefit. Two pointers technique can dramatically improve the performance of your solution. It allows you to move from `O(n^2)`, `O(n log n)` time complexity to `O(n)`
 
 ## What is two pointers technique?
-- To understand two pointers technique you should be familiar with the data structures like arrays and linked lists, and master Big O notation. If you feel like you may need to ramp up your knowledge in understanding big o notation, I recommend you to watch my video about it.
- - Two pointers basically mean that you have 2 variables, and values of them are looking into addresses in memory. 
- - On the Figure 1, you can see how arrays look like under the hood. Each element has own index, value and address. 
+To understand two pointers technique you should be familiar with the data structures like arrays and linked lists, and master Big O notation. If you feel like you may need to ramp up your knowledge in understanding big o notation, I recommend you to watch my video about it.
+
+Two pointers basically mean that you have 2 variables, and their values point to addresses in memory. 
+
+On the Figure 1, you can see how arrays look under the hood. Each element has own index, value and address. 
 ![Figure 1 - Array under the hood](/images/2ptrs-ex-01.png "Figure 1 - Array under the hood")
- - On the Figure 2, we've created two variables `left` and `right` and values of these variables are address 1000 and 1004. Basically it means that If element with address 1000 will be changed, then `left` variable will be changed as well. The same for 1004 address and `right` variable.
+
+On the Figure 2, we've created two variables `left` and `right` and values of these variables are address 1000 and 1004. Basically it means that If element with address 1000 will be changed, then `left` variable will be changed as well. The same for 1004 address and `right` variable.
 ![Figure 2 - Pointers](/images/2prtrs-ex-02.png "Figure 2 - Pointers")
-- These pointers allow you to track the state of 2 elements at once, during iteration through collection. Collection usually is an array, linked list and this technique cannot be used directly with non-linear data structures. 
-- Usually, depending on the problem, these pointers have name right and left, or slow and fast. If you wondering why, stay tuned :).
+These pointers allow you to track the state of 2 elements at once, during iteration through collection. Collection usually is an array, linked list and this technique cannot be used directly with non-linear data structures. 
+
+Usually, depending on the problem, these pointers have name right and left, or slow and fast. If you wondering why, stay tuned :).
 
 ## Example that shows the a performance difference
 
 https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 
-### Example that can be solved in Space: O(1) TIme: O(n^2)
+### Solution #1: Space: O(1) Time: O(n^2)
 
-Here we're trying to check all possible sum combination between 2 elements in the given array. But the problem is the it takes quite long period of time for machine to process. Let's check benchmark test.
-
+Here we're trying to check all possible sum combinations between 2 elements in the given array. But the problem is that it takes quite a long period of time for machine to process. Let's run a benchmark test.
 ```go
 package main
 
@@ -166,7 +157,7 @@ PASS
 ok  	github.com/bukhavtsov/youtube/two-pointers/two_sum_quadratic	5.691s
 ```
 
-### Example that can be solved in Space: O(1) TIme: O(n)
+### Solution #2: Space: O(1) Time: O(n)
 
 ```go
 package main
@@ -305,8 +296,8 @@ ok  	github.com/bukhavtsov/youtube/two-pointers/two_sum_linear	6.067s
 ```
 
 ### The details of two pointers solution.
-With two pointers technique we can avoid extra iterations and speed up the process of finding target sum.
-Because we know that array is sorted. So we'll create 2 pointers `left` pointer the index of the smallest element and the `right` will be the index of biggest element. We'll iterate through the array and on each iteration we'll check  the sum of `left` and `right`. If number is bigger than target - we'll decrease the right pointer, if the value is smaller than target we'll increase left pointer. And in the end we'll end up with the correct pairs.
+With the Two Pointers technique we can avoid unnecessary iterations and speed up the process of finding the target sum.
+Because we know that the array is sorted. So we'll create two pointers, the `left` pointer is an index of the smallest element and the `right` will be the index of largest element. We'll iterate through the array and on each iteration we'll check  the sum of `left` and `right` pointers. If the number is greater than target - we'll decrease the right pointer; if the value is smaller than target, we'll increase the left pointer. And in the end we'll obtain the correct pairs.
 
 ```go
 func twoSum(nums []int, target int) []int {
@@ -332,7 +323,7 @@ func twoSum(nums []int, target int) []int {
 As you can see in benchmarks, the solution with two pointers technique has stable results. Number of iterations and Time per Iteration almost remains the same, and much better in comparison with nested loops solution. 
 
 
-## Problem with fast & slow pointer.
+## Problem with fast & slow pointer (TODO: ADD Description).
 
 FInd middle element of the array
 https://leetcode.com/problems/middle-of-the-linked-list/
@@ -350,3 +341,5 @@ func middleNode(head *ListNode) *ListNode {
     return slow
 }
 ```
+
+## Summary (TODO)

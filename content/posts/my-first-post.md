@@ -3,18 +3,7 @@ title: "Big O Notation Notes"
 date: 2022-11-26T22:40:00+01:00
 draft: false 
 ---
-# Big O Notation
-# Begin
-
 Hello everybody and welcome back. My name is Artem and in this blog post we're going to understand what does Big O notation mean and consider the time complexity. So, Let's get to it!
-
-## Agenda:
-- Why it's essential to understand and master Big O?
-- Big O definition
-- Big O explanation with example
-- Types of Big O and simple examples
-- Considerations
-
 
 ## Why it's essential to understand and master Big O?
 - First, it allows you to determine the most efficient solution for task that you need to resolve.
@@ -27,8 +16,7 @@ Hello everybody and welcome back. My name is Artem and in this blog post we're g
 Or to be more precise **the way to describe how long algorithm performs as it's input size growth.**  
 
 
-## Big O explanation with an example
-with liner complexity
+## Example with linear time complexity
 
 ```go
 // The program finds the maximum element in the list

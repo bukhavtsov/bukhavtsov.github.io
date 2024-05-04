@@ -1,6 +1,6 @@
 ---
 title: "How to integrate Golang Service with Chat GPT API"
-date: 2024-05-05T22:40:00+01:00
+date: 2023-05-01T22:40:00+01:00
 draft: false 
 ---
 # How to integrate Golang Service with Chat GPT API.
@@ -19,7 +19,7 @@ Architecture will consist of 2 components:
 - Backend - Golang application with Echo web framework.
 - Chat GPT API that Open AI provides.
 
-![architecture](/images/architecture-server-with-gpt.png)
+![architecture](/images/architecture-server-with-gpt.png "High Level Architecture")
 
 ## How to run
 1. Specify env variables `CHAT_GPT_API_URL` and `CHAT_GPT_API_KEY`

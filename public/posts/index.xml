@@ -1,11 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>ArtemCodes</title>
-        <link>//localhost:1313/</link>
-        <description>Hi there! My name is Artem, Let&#39;s build something amazing together!</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 01 May 2024 22:40:00 &#43;0100</lastBuildDate>
-            <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+        <title>All Posts - ArtemCodes</title>
+        <link>//localhost:1313/posts/</link>
+        <description>All Posts | ArtemCodes</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 01 May 2024 22:40:00 &#43;0100</lastBuildDate><atom:link href="//localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
     <title>How to integrate Golang Service with Chat GPT API</title>
     <link>//localhost:1313/posts/golang-server-with-chat-gpt-api/</link>
     <pubDate>Wed, 01 May 2024 22:40:00 &#43;0100</pubDate>

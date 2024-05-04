@@ -1,6 +1,6 @@
 ---
-title: "The Incredible Two Pointers technique"
-date: 2023-07-01T22:40:00+01:00
+title: "How to integrate Golang Service with Chat GPT API"
+date: 2024-05-05T22:40:00+01:00
 draft: false 
 ---
 # How to integrate Golang Service with Chat GPT API.

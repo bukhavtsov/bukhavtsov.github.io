@@ -30,7 +30,7 @@ https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 ### Solution #1: Space: O(1) Time: O(n^2)
 
 Here we're trying to check all possible sum combinations between 2 elements in the given array. But the problem is that it takes quite a long period of time for machine to process. Let's run a benchmark test.
-```go
+```js
 package main
 
 import (

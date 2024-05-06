@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>The Incredible Two Pointers technique - ArtemCodes</title><meta name="Description" content="Hi there! My name is Artem, Let&#39;s build something amazing together!"><meta property="og:url" content="//localhost:1313/posts/two-pointers/">
+        <title>The Incredible Two Pointers technique - ArtemCodes</title><meta name="Description" content="Hi there! My name is Artem, Let&#39;s build something amazing together!"><meta property="og:url" content="http://localhost:1313/posts/two-pointers/">
   <meta property="og:site_name" content="ArtemCodes">
   <meta property="og:title" content="The Incredible Two Pointers technique">
   <meta property="og:description" content="Hey there, fellow learners! I’m Artem, and today’s lesson is all about the incredible Two Pointers technique.
@@ -22,7 +22,7 @@ What is two pointers technique? To understand two pointers technique you should 
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png"><link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="../../site.webmanifest"><link rel="canonical" href="//localhost:1313/posts/two-pointers/" /><link rel="prev" href="//localhost:1313/posts/my-first-post/" /><link rel="next" href="//localhost:1313/posts/golang-server-with-chat-gpt-api/" /><link rel="stylesheet" href="../../css/style.min.css"><link rel="preload" href="../../lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png"><link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="../../site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/two-pointers/" /><link rel="prev" href="http://localhost:1313/posts/my-first-post/" /><link rel="next" href="http://localhost:1313/posts/golang-server-with-chat-gpt-api/" /><link rel="stylesheet" href="../../css/style.min.css"><link rel="preload" href="../../lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="../../lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="../../lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="../../lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -32,13 +32,13 @@ What is two pointers technique? To understand two pointers technique you should 
         "inLanguage": "en-us",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "\/\/localhost:1313\/posts\/two-pointers\/"
+            "@id": "http:\/\/localhost:1313\/posts\/two-pointers\/"
         },"genre": "posts","wordcount":  1340 ,
-        "url": "\/\/localhost:1313\/posts\/two-pointers\/","datePublished": "2023-07-01T22:40:00+01:00","dateModified": "2023-07-01T22:40:00+01:00","publisher": {
+        "url": "http:\/\/localhost:1313\/posts\/two-pointers\/","datePublished": "2023-07-01T22:40:00+01:00","dateModified": "2023-07-01T22:40:00+01:00","publisher": {
             "@type": "Organization",
             "name": "Artem Codes","logo": {
                     "@type": "ImageObject",
-                    "url": "\/\/localhost:1313\/images\/avatar.jpeg",
+                    "url": "http:\/\/localhost:1313\/images\/avatar.jpeg",
                     "width":  800 ,
                     "height":  800 
                 }},"author": {
@@ -137,18 +137,18 @@ These pointers allow you to track the state of 2 elements at once, during iterat
 <p><a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/" target="_blank" rel="noopener noreffer ">https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/</a></p>
 <h3 id="solution-1-space-o1-time-on2">Solution #1: Space: O(1) Time: O(n^2)</h3>
 <p>Here we&rsquo;re trying to check all possible sum combinations between 2 elements in the given array. But the problem is that it takes quite a long period of time for machine to process. Let&rsquo;s run a benchmark test.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">package</span> <span style="color:#a6e22e">main</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> (
 </span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;reflect&#34;</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;testing&#34;</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
 </span></span><span style="display:flex;"><span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">nums</span> []<span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">target</span> <span style="color:#66d9ef">int</span>) []<span style="color:#66d9ef">int</span> {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> len(<span style="color:#a6e22e">nums</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; <span style="color:#a6e22e">n</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">j</span> &lt; <span style="color:#a6e22e">n</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span> {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">func</span> <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">nums</span> []<span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">target</span> <span style="color:#66d9ef">int</span>) []<span style="color:#66d9ef">int</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">len</span>(<span style="color:#a6e22e">nums</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">n</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">n</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span> {
 </span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">nums</span>[<span style="color:#a6e22e">i</span>]<span style="color:#f92672">+</span><span style="color:#a6e22e">nums</span>[<span style="color:#a6e22e">j</span>] <span style="color:#f92672">==</span> <span style="color:#a6e22e">target</span> {
 </span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">return</span> []<span style="color:#66d9ef">int</span>{<span style="color:#a6e22e">i</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">j</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>}
 </span></span><span style="display:flex;"><span>			}
@@ -158,87 +158,87 @@ These pointers allow you to track the state of 2 elements at once, during iterat
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> []<span style="color:#66d9ef">int</span>{}
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestTwoSum</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">func</span> <span style="color:#a6e22e">TestTwoSum</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">numbers</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">15</span>}
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">target</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">9</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">expected</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>}
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">result</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">numbers</span>, <span style="color:#a6e22e">target</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">DeepEqual</span>(<span style="color:#a6e22e">result</span>, <span style="color:#a6e22e">expected</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">DeepEqual</span>(<span style="color:#a6e22e">result</span>, <span style="color:#a6e22e">expected</span>) {
 </span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;Expected %v, but got %v&#34;</span>, <span style="color:#a6e22e">expected</span>, <span style="color:#a6e22e">result</span>)
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">numbers</span> = []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>}
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">target</span> = <span style="color:#ae81ff">6</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">expected</span> = []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>}
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">result</span> = <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">numbers</span>, <span style="color:#a6e22e">target</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">DeepEqual</span>(<span style="color:#a6e22e">result</span>, <span style="color:#a6e22e">expected</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">expected</span> <span style="color:#f92672">=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">numbers</span>, <span style="color:#a6e22e">target</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">DeepEqual</span>(<span style="color:#a6e22e">result</span>, <span style="color:#a6e22e">expected</span>) {
 </span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;Expected %v, but got %v&#34;</span>, <span style="color:#a6e22e">expected</span>, <span style="color:#a6e22e">result</span>)
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">numbers</span> = []<span style="color:#66d9ef">int</span>{<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>}
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">target</span> = <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">expected</span> = []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>}
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">result</span> = <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">numbers</span>, <span style="color:#a6e22e">target</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">DeepEqual</span>(<span style="color:#a6e22e">result</span>, <span style="color:#a6e22e">expected</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">expected</span> <span style="color:#f92672">=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">numbers</span>, <span style="color:#a6e22e">target</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">DeepEqual</span>(<span style="color:#a6e22e">result</span>, <span style="color:#a6e22e">expected</span>) {
 </span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;Expected %v, but got %v&#34;</span>, <span style="color:#a6e22e">expected</span>, <span style="color:#a6e22e">result</span>)
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">generateSortedNumbers</span>(<span style="color:#a6e22e">size</span> <span style="color:#66d9ef">int</span>) []<span style="color:#66d9ef">int</span> {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">numbers</span> <span style="color:#f92672">:=</span> make([]<span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">size</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; <span style="color:#a6e22e">size</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
-</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">numbers</span>[<span style="color:#a6e22e">i</span>] = <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">func</span> <span style="color:#a6e22e">generateSortedNumbers</span>(<span style="color:#a6e22e">size</span> <span style="color:#66d9ef">int</span>) []<span style="color:#66d9ef">int</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">numbers</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">make</span>([]<span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">size</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">size</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">numbers</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">numbers</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">BenchmarkTwoSum10</span>(<span style="color:#a6e22e">b</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">B</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">func</span> <span style="color:#a6e22e">BenchmarkTwoSum10</span>(<span style="color:#a6e22e">b</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">B</span>) {
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">numbers</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">generateSortedNumbers</span>(<span style="color:#ae81ff">10</span>)
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">target</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">9</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">ResetTimer</span>() <span style="color:#75715e">// Reset the timer before starting the benchmark
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">N</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
-</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">numbers</span>, <span style="color:#a6e22e">target</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">N</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">_</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">numbers</span>, <span style="color:#a6e22e">target</span>)
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">BenchmarkTwoSum100</span>(<span style="color:#a6e22e">b</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">B</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">func</span> <span style="color:#a6e22e">BenchmarkTwoSum100</span>(<span style="color:#a6e22e">b</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">B</span>) {
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">numbers</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">generateSortedNumbers</span>(<span style="color:#ae81ff">100</span>)
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">target</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">99</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">ResetTimer</span>() <span style="color:#75715e">// Reset the timer before starting the benchmark
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">N</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
-</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">numbers</span>, <span style="color:#a6e22e">target</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">N</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">_</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">numbers</span>, <span style="color:#a6e22e">target</span>)
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">BenchmarkTwoSum1000</span>(<span style="color:#a6e22e">b</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">B</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">func</span> <span style="color:#a6e22e">BenchmarkTwoSum1000</span>(<span style="color:#a6e22e">b</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">B</span>) {
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">numbers</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">generateSortedNumbers</span>(<span style="color:#ae81ff">1000</span>)
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">target</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">999</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">ResetTimer</span>() <span style="color:#75715e">// Reset the timer before starting the benchmark
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">N</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
-</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">numbers</span>, <span style="color:#a6e22e">target</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">N</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">_</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">numbers</span>, <span style="color:#a6e22e">target</span>)
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">BenchmarkTwoSum10000</span>(<span style="color:#a6e22e">b</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">B</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">func</span> <span style="color:#a6e22e">BenchmarkTwoSum10000</span>(<span style="color:#a6e22e">b</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">B</span>) {
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">numbers</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">generateSortedNumbers</span>(<span style="color:#ae81ff">10000</span>)
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">target</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">9999</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">ResetTimer</span>() <span style="color:#75715e">// Reset the timer before starting the benchmark
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">N</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
-</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">numbers</span>, <span style="color:#a6e22e">target</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">N</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">_</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">numbers</span>, <span style="color:#a6e22e">target</span>)
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">func</span> <span style="color:#a6e22e">main</span>() {
 </span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Run the benchmark tests
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">benchmarkResult10</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">Benchmark</span>(<span style="color:#a6e22e">BenchmarkTwoSum10</span>)
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;BenchmarkTwoSum10:&#34;</span>, <span style="color:#a6e22e">benchmarkResult10</span>)
@@ -439,7 +439,7 @@ Because we know that the array is sorted. So we&rsquo;ll create two pointers, th
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="//localhost:1313/posts/two-pointers/" data-title="The Incredible Two Pointers technique"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="//localhost:1313/posts/two-pointers/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="//localhost:1313/posts/two-pointers/" data-title="The Incredible Two Pointers technique"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="//localhost:1313/posts/two-pointers/" data-title="The Incredible Two Pointers technique"><i data-svg-src="../../lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="//localhost:1313/posts/two-pointers/" data-title="The Incredible Two Pointers technique"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/two-pointers/" data-title="The Incredible Two Pointers technique"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/two-pointers/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/two-pointers/" data-title="The Incredible Two Pointers technique"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/two-pointers/" data-title="The Incredible Two Pointers technique"><i data-svg-src="../../lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/two-pointers/" data-title="The Incredible Two Pointers technique"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>

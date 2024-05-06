@@ -1,7 +1,7 @@
-baseURL = 'bukhavtsov.github.io'
+baseURL = 'https://artem.codes'
 languageCode = 'en-us'
 title = 'ArtemCodes'
-theme = 'loveit'
+theme = 'LoveIt'
 relativeURLs = true
 canonifyURLs = true
 

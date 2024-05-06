@@ -6,11 +6,11 @@ draft: false
 # How to integrate Golang Service with Chat GPT API.
 
 ## Intro
-In this tutorial we're going to create a Golang service that communicates with Chat GPT API. The source code you can find [https://github.com/bukhavtsov/golang-server-with-chat-gpt-api](here). As a result you should be able to understand how to do it and change the logic for implementing your own use cases.
+In this tutorial we're going to create a Golang service that communicates with Chat GPT API. The source code you can find [here](https://github.com/bukhavtsov/golang-server-with-chat-gpt-api). As a result you should be able to understand how to do it and change the logic for implementing your own use cases.
 
 ## Considerations
 For implementing the solution we need to have:
-1. API Key to Chat GPT API and at the moment Chat GPT doesn't provide free trial, so you'll have to setup your Open API account and pay [https://openai.com/api/pricing](X) per token. But for a pet project it's quite fair price in my opinion.
+1. API Key to Chat GPT API and at the moment Chat GPT doesn't provide free trial, so you'll have to setup your Open API account and pay [X](https://openai.com/api/pricing) per token. But for a pet project it's quite fair price in my opinion.
 2. Golang installed.
 
 ## What we'll try to develop?

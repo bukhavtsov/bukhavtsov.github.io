@@ -1,7 +1,7 @@
 baseURL = 'https://artem.codes'
 languageCode = 'en-us'
 title = 'ArtemCodes'
-theme = 'LoveIt'
+theme = 'loveit'
 relativeURLs = true
 canonifyURLs = true
 

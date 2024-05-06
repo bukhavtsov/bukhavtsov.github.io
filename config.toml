@@ -140,7 +140,7 @@ canonifyURLs = true
   # Search config
   # 搜索配置
   [params.search]
-    enable = false
+    enable = true 
     # type of search engine ["lunr", "algolia"]
     # 搜索引擎的类型 ["lunr", "algolia"]
     type = "lunr"

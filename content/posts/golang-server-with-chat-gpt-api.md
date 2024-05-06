@@ -19,7 +19,7 @@ Architecture will consist of 2 components:
 - Backend - Golang application with Echo web framework.
 - Chat GPT API that Open AI provides.
 
-![architecture](architecture-server-with-gpt.png "High Level Architecture")
+![architecture](/images/architecture-server-with-gpt.png "High Level Architecture")
 
 ## How to run
 1. Specify env variables `CHAT_GPT_API_URL` and `CHAT_GPT_API_KEY`

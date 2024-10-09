@@ -3,348 +3,139 @@ title: "The Incredible Two Pointers technique"
 date: 2023-07-01T22:40:00+01:00
 draft: false 
 ---
+
+# The Incredible Two Pointers Technique
+
 Hey there, fellow learners! I'm Artem, and today's lesson is all about the incredible Two Pointers technique.
 
-## What is the benefit of two pointers technique?
+## What is the Benefit of the Two Pointers Technique?
 
-Before we start digging into this technique, I want to tell you about the benefit. Two pointers technique can dramatically improve the performance of your solution. It allows you to move from `O(n^2)`, `O(n log n)` time complexity to `O(n)`
+Before we dive deep into the details, let's first talk about the benefit of the Two Pointers technique. This technique can dramatically improve the performance of your solutions, allowing you to optimize algorithms with time complexities like `O(n^2)` or `O(n log n)` down to `O(n)` in many cases.
 
-## What is two pointers technique?
-To understand two pointers technique you should be familiar with the data structures like arrays and linked lists, and master Big O notation. If you feel like you may need to ramp up your knowledge in understanding big o notation, I recommend you to watch my video about it.
+## What is the Two Pointers Technique?
 
-Two pointers basically mean that you have 2 variables, and their values point to addresses in memory. 
+To understand the Two Pointers technique, you should have a basic grasp of data structures such as arrays and linked lists and be comfortable with Big O notation. If you're not sure about Big O, I recommend watching my video on the topic for a refresher.
 
-On the Figure 1, you can see how arrays look under the hood. Each element has own index, value and address. 
+The Two Pointers technique uses two variables (or "pointers") that point to different positions in an array or list. These pointers move through the collection based on certain conditions, allowing you to keep track of multiple elements simultaneously.
+
+### How It Works
+
+In **Figure 1**, you can see how arrays look under the hood. Each element has its index, value, and memory address.  
 ![Figure 1 - Array under the hood](/images/2ptrs-ex-01.png "Figure 1 - Array under the hood")
 
-On the Figure 2, we've created two variables `left` and `right` and values of these variables are address 1000 and 1004. Basically it means that If element with address 1000 will be changed, then `left` variable will be changed as well. The same for 1004 address and `right` variable.
+In **Figure 2**, we have two pointers, `left` and `right`, pointing to addresses 1000 and 1004, respectively. This means that if the element at address 1000 is updated, the `left` pointer will reflect this change. The same applies to the `right` pointer.  
 ![Figure 2 - Pointers](/images/2prtrs-ex-02.png "Figure 2 - Pointers")
-These pointers allow you to track the state of 2 elements at once, during iteration through collection. Collection usually is an array, linked list and this technique cannot be used directly with non-linear data structures. 
 
-Usually, depending on the problem, these pointers have name right and left, or slow and fast. If you wondering why, stay tuned :).
+These pointers allow you to track two elements simultaneously as you iterate through a collection. This technique is most commonly used with arrays and linked lists but isn't generally applicable to non-linear data structures.
 
-## Example that shows the a performance difference
+In many cases, these pointers are called **left and right** or **slow and fast**. Wondering why? Keep reading!
 
-https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+## Example Showing the Performance Difference
 
-### Solution #1: Space: O(1) Time: O(n^2)
+Let's consider a problem like [Leetcode's Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/).
 
-Here we're trying to check all possible sum combinations between 2 elements in the given array. But the problem is that it takes quite a long period of time for machine to process. Let's run a benchmark test.
-```js
-package main
+### Solution #1: Brute Force - Space: O(1), Time: O(n^2)
 
-import (
-	"reflect"
-	"testing"
-	"fmt"
-)
+In this approach, we check all possible combinations of two elements in the array. This is quite inefficient because the time complexity is `O(n^2)`. Let's run a benchmark to see how long it takes.
 
+```go
+// Brute-force approach
 func twoSum(nums []int, target int) []int {
-	n := len(nums)
-	for i := 0; i < n-1; i++ {
-		for j := i + 1; j < n; j++ {
-			if nums[i]+nums[j] == target {
-				return []int{i+1, j+1}
-			}
-		}
-	}
-
-	return []int{}
-}
-
-func TestTwoSum(t *testing.T) {
-	numbers := []int{2, 7, 11, 15}
-	target := 9
-	expected := []int{1, 2}
-	result := twoSum(numbers, target)
-	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Expected %v, but got %v", expected, result)
-	}
-
-	numbers = []int{2, 3, 4}
-	target = 6
-	expected = []int{1, 3}
-	result = twoSum(numbers, target)
-	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Expected %v, but got %v", expected, result)
-	}
-
-	numbers = []int{-1, 0}
-	target = -1
-	expected = []int{1, 2}
-	result = twoSum(numbers, target)
-	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Expected %v, but got %v", expected, result)
-	}
-}
-
-
-func generateSortedNumbers(size int) []int {
-	numbers := make([]int, size)
-	for i := 0; i < size; i++ {
-		numbers[i] = i + 1
-	}
-	return numbers
-}
-
-func BenchmarkTwoSum10(b *testing.B) {
-	numbers := generateSortedNumbers(10)
-	target := 9
-
-	b.ResetTimer() // Reset the timer before starting the benchmark
-
-	for i := 0; i < b.N; i++ {
-		_ = twoSum(numbers, target)
-	}
-}
-
-func BenchmarkTwoSum100(b *testing.B) {
-	numbers := generateSortedNumbers(100)
-	target := 99
-
-	b.ResetTimer() // Reset the timer before starting the benchmark
-
-	for i := 0; i < b.N; i++ {
-		_ = twoSum(numbers, target)
-	}
-}
-
-func BenchmarkTwoSum1000(b *testing.B) {
-	numbers := generateSortedNumbers(1000)
-	target := 999
-
-	b.ResetTimer() // Reset the timer before starting the benchmark
-
-	for i := 0; i < b.N; i++ {
-		_ = twoSum(numbers, target)
-	}
-}
-
-func BenchmarkTwoSum10000(b *testing.B) {
-	numbers := generateSortedNumbers(10000)
-	target := 9999
-
-	b.ResetTimer() // Reset the timer before starting the benchmark
-
-	for i := 0; i < b.N; i++ {
-		_ = twoSum(numbers, target)
-	}
-}
-
-
-func main() {
-	// Run the benchmark tests
-	benchmarkResult10 := testing.Benchmark(BenchmarkTwoSum10)
-	fmt.Println("BenchmarkTwoSum10:", benchmarkResult10)
-
-	benchmarkResult100 := testing.Benchmark(BenchmarkTwoSum100)
-	fmt.Println("BenchmarkTwoSum100:", benchmarkResult100)
-
-	benchmarkResult1000 := testing.Benchmark(BenchmarkTwoSum1000)
-	fmt.Println("BenchmarkTwoSum1000:", benchmarkResult1000)
-
-	benchmarkResult10000 := testing.Benchmark(BenchmarkTwoSum10000)
-	fmt.Println("BenchmarkTwoSum10000:", benchmarkResult10000)
+    n := len(nums)
+    for i := 0; i < n-1; i++ {
+        for j := i + 1; j < n; j++ {
+            if nums[i]+nums[j] == target {
+                return []int{i+1, j+1}
+            }
+        }
+    }
+    return []int{}
 }
 ```
 
-Benchmark results:
+Benchmark results for the brute force solution:
+
 ```bash
 goos: darwin
 goarch: amd64
 pkg: github.com/bukhavtsov/youtube/two-pointers/two_sum_quadratic
-cpu: Intel(R) Core(TM) i7-1068NG7 CPU @ 2.30GHz
 BenchmarkTwoSum10-8      	52684279	        23.03 ns/op
 BenchmarkTwoSum100-8     	16249501	        71.73 ns/op
 BenchmarkTwoSum1000-8    	 2671320	       441.8 ns/op
 BenchmarkTwoSum10000-8   	  269739	      4381 ns/op
 PASS
-ok  	github.com/bukhavtsov/youtube/two-pointers/two_sum_quadratic	5.691s
 ```
 
-### Solution #2: Space: O(1) Time: O(n)
+### Solution #2: Two Pointers - Space: O(1), Time: O(n)
+
+Now let's solve the same problem using the Two Pointers technique. This approach takes advantage of the fact that the array is sorted, allowing us to reduce the time complexity to `O(n)`.
 
 ```go
-package main
-
-import (
-	"reflect"
-	"testing"
-	"fmt"
-)
-
+// Two Pointers approach
 func twoSum(numbers []int, target int) []int {
-	left, right := 0, len(numbers)-1
-
-	for left < right {
-		sum := numbers[left] + numbers[right]
-		if sum == target {
-			return []int{left + 1, right + 1} // Adding 1 to match the 1-indexing
-		} else if sum < target {
-			left++
-		} else {
-			right--
-		}
-	}
-
-	return []int{-1, -1} // Return -1, -1 if no solution found
-}
-
-func TestTwoSum(t *testing.T) {
-	numbers := []int{2, 7, 11, 15}
-	target := 9
-	expected := []int{1, 2}
-	result := twoSum(numbers, target)
-	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Expected %v, but got %v", expected, result)
-	}
-
-	numbers = []int{2, 3, 4}
-	target = 6
-	expected = []int{1, 3}
-	result = twoSum(numbers, target)
-	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Expected %v, but got %v", expected, result)
-	}
-
-	numbers = []int{-1, 0}
-	target = -1
-	expected = []int{1, 2}
-	result = twoSum(numbers, target)
-	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Expected %v, but got %v", expected, result)
-	}
-}
-
-
-func generateSortedNumbers(size int) []int {
-	numbers := make([]int, size)
-	for i := 0; i < size; i++ {
-		numbers[i] = i + 1
-	}
-	return numbers
-}
-
-func BenchmarkTwoSum10(b *testing.B) {
-	numbers := generateSortedNumbers(10)
-	target := 9
-
-	b.ResetTimer() // Reset the timer before starting the benchmark
-
-	for i := 0; i < b.N; i++ {
-		_ = twoSum(numbers, target)
-	}
-}
-
-func BenchmarkTwoSum100(b *testing.B) {
-	numbers := generateSortedNumbers(100)
-	target := 99
-
-	b.ResetTimer() // Reset the timer before starting the benchmark
-
-	for i := 0; i < b.N; i++ {
-		_ = twoSum(numbers, target)
-	}
-}
-
-func BenchmarkTwoSum1000(b *testing.B) {
-	numbers := generateSortedNumbers(1000)
-	target := 999
-
-	b.ResetTimer() // Reset the timer before starting the benchmark
-
-	for i := 0; i < b.N; i++ {
-		_ = twoSum(numbers, target)
-	}
-}
-
-func BenchmarkTwoSum10000(b *testing.B) {
-	numbers := generateSortedNumbers(10000)
-	target := 9999
-
-	b.ResetTimer() // Reset the timer before starting the benchmark
-
-	for i := 0; i < b.N; i++ {
-		_ = twoSum(numbers, target)
-	}
-}
-
-
-func main() {
-	// Run the benchmark tests
-	benchmarkResult10 := testing.Benchmark(BenchmarkTwoSum10)
-	fmt.Println("BenchmarkTwoSum10:", benchmarkResult10)
-
-	benchmarkResult100 := testing.Benchmark(BenchmarkTwoSum100)
-	fmt.Println("BenchmarkTwoSum100:", benchmarkResult100)
-
-	benchmarkResult1000 := testing.Benchmark(BenchmarkTwoSum1000)
-	fmt.Println("BenchmarkTwoSum1000:", benchmarkResult1000)
-
-	benchmarkResult10000 := testing.Benchmark(BenchmarkTwoSum10000)
-	fmt.Println("BenchmarkTwoSum10000:", benchmarkResult10000)
-}
-```
-
-Benchmark results
-```bash
-goos: darwin
-goarch: amd64
-pkg: github.com/bukhavtsov/youtube/two-pointers/two_sum_linear
-cpu: Intel(R) Core(TM) i7-1068NG7 CPU @ 2.30GHz
-BenchmarkTwoSum10-8      	56371071	        21.93 ns/op
-BenchmarkTwoSum100-8     	52781440	        20.58 ns/op
-BenchmarkTwoSum1000-8    	58837300	        20.83 ns/op
-BenchmarkTwoSum10000-8   	55983619	        21.22 ns/op
-PASS
-ok  	github.com/bukhavtsov/youtube/two-pointers/two_sum_linear	6.067s
-```
-
-### The details of two pointers solution.
-With the Two Pointers technique we can avoid unnecessary iterations and speed up the process of finding the target sum.
-Because we know that the array is sorted. So we'll create two pointers, the `left` pointer is an index of the smallest element and the `right` will be the index of largest element. We'll iterate through the array and on each iteration we'll check  the sum of `left` and `right` pointers. If the number is greater than target - we'll decrease the right pointer; if the value is smaller than target, we'll increase the left pointer. And in the end we'll obtain the correct pairs.
-
-```go
-func twoSum(nums []int, target int) []int {
-    left := 0
-    right := len(nums) - 1
-
+    left, right := 0, len(numbers)-1
     for left < right {
-        currentSum := nums[left] + nums[right]
-        if currentSum == target {
-            return []int{nums[left], nums[right]}
-        } else if currentSum < target {
+        sum := numbers[left] + numbers[right]
+        if sum == target {
+            return []int{left + 1, right + 1} // To match 1-indexing
+        } else if sum < target {
             left++
         } else {
             right--
         }
     }
-
-    return []int{}
+    return []int{-1, -1}
 }
 ```
 
-### Takeaways
-As you can see in benchmarks, the solution with two pointers technique has stable results. Number of iterations and Time per Iteration almost remains the same, and much better in comparison with nested loops solution. 
+Benchmark results for the Two Pointers solution:
 
+```bash
+goos: darwin
+goarch: amd64
+pkg: github.com/bukhavtsov/youtube/two-pointers/two_sum_linear
+BenchmarkTwoSum10-8      	56371071	        21.93 ns/op
+BenchmarkTwoSum100-8     	52781440	        20.58 ns/op
+BenchmarkTwoSum1000-8    	58837300	        20.83 ns/op
+BenchmarkTwoSum10000-8   	55983619	        21.22 ns/op
+PASS
+```
 
-## Problem with fast & slow pointer (TODO: ADD Description).
+### Details of the Two Pointers Solution
 
-FInd middle element of the array
-https://leetcode.com/problems/middle-of-the-linked-list/
+The Two Pointers approach optimizes performance by eliminating unnecessary iterations. Here's how it works:
 
+- Start with two pointers: one (`left`) pointing to the smallest element, and another (`right`) pointing to the largest.
+- On each iteration, check the sum of the elements at the pointers.
+  - If the sum is greater than the target, move the `right` pointer to the left (to decrease the sum).
+  - If the sum is smaller than the target, move the `left` pointer to the right (to increase the sum).
+  
+This process continues until the correct pair is found.
+
+## Problem: Finding the Middle Element with Fast & Slow Pointers
+
+In this section, we'll tackle a common problem using fast and slow pointers: finding the middle element of a linked list. This is a great example of how Two Pointers can be adapted for different scenarios.
+
+Problem: [Leetcode's Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
+
+### Fast & Slow Pointers Solution
+
+In this approach, one pointer moves twice as fast as the other. By the time the fast pointer reaches the end, the slow pointer will be in the middle.
 
 ```go
 func middleNode(head *ListNode) *ListNode {
-    fast := head 
+    fast := head
     slow := head
     for fast != nil && fast.Next != nil {
-        fast = fast.Next
-        fast = fast.Next
+        fast = fast.Next.Next
         slow = slow.Next
     }
     return slow
 }
 ```
 
-## Summary (TODO)
+## Summary
+
+The Two Pointers technique is a powerful optimization tool for solving problems efficiently. As shown by the benchmarks, this approach offers consistent performance with minimal time complexity compared to brute-force methods. Whether you're finding pairs in a sorted array or locating the middle of a linked list, Two Pointers can help you solve problems faster and more elegantly.
+
+Next steps? Try using this technique in your own algorithms and see how it can optimize your solutions!
